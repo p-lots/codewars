@@ -1,0 +1,2 @@
+Given a double n, return a string that corresponds to the value of n.
+For example, <code>n = 3</code> should return <code>"3"</code>, <code>n = 1e3</code> should return <code>"1000"</code>, <code>n = 2.1</code> should return <code>"2.1"</code> <b>not</b> 2.100000000. That's as simple as it gets! 

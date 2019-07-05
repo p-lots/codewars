@@ -1,0 +1,21 @@
+#include <vector>
+
+std::vector<int> humanYearsCatYearsDogYears(int humanYears)
+{
+    int catYears = 0, dogYears = 0;
+    for (unsigned i = 1; i <= humanYears; i++) {
+        if (i == 1) {
+            catYears += 15;
+            dogYears += 15;
+        }
+        else if (i == 2) {
+            catYears += 9;
+            dogYears += 9;
+        }
+        else {
+            catYears += 4;
+            dogYears += 5;
+        }
+    }
+    return { humanYears, catYears, dogYears };
+}

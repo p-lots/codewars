@@ -1,0 +1,1 @@
+make_new_list=lambda lst: [a+b for a,b in zip(lst,lst[1:])]
