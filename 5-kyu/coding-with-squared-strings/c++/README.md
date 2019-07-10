@@ -5,7 +5,7 @@ A squared string has n lines, each substring being n characters long: For exampl
 We will use squared strings to code and decode texts. To make things easier
 we suppose that our original text doesn't include the character '\n'.
 
-#Coding
+# Coding
 Input: 
 
  - a text `t` of length `l`. 
@@ -14,7 +14,7 @@ Input:
  - From now on we can transform the new `t` in a squared string `s` of size `n` by inserting `'\n'` where needed.
  - Apply a clockwise rotation of 90 degrees to `s`: that's it for the coding part.
 
-#Decoding
+# Decoding
 Input: 
 
 - a squared string `s` resulting from the coding
