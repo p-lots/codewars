@@ -1,26 +1,18 @@
-#include <string>
-#include <vector>
-
-class LongestConsec
-{
-public:
-    static std::string longestConsec(std::vector<std::string> &strarr, int k);
-};
-
-std::string LongestConsec::longestConsec(std::vector<std::string> &strarr, int k)
-{
-    if ((strarr.size() == 0 || k > strarr.size()) || k <= 0) return "";
-    std::vector<std::string> results;
-    for (auto iter = strarr.begin(); iter != strarr.end(); iter++) {
-        std::string pb = *iter;
-        for (auto iter_2 = iter + 1; std::abs(std::distance(iter, iter_2)) < k && iter_2 != strarr.end(); iter_2++) {
-            pb += *iter_2;
+func longestConsec(_ strarr: [String], _ k: Int) -> String {
+    guard !strarr.isEmpty && k <= strarr.count && k > 0 else { return "" }
+    var ret = [String]()
+    for i in 0..<strarr.count {
+        var str: String = ""
+        if i + k < strarr.count {
+            str = strarr[i..<(i + k)].joined()
+        } else {
+            str = strarr[i..<strarr.count].joined()
         }
-        results.push_back(pb);
+        ret.append(str)
     }
-    return *(std::max_element(results.begin(), results.end(),
-        [](const std::string &lhs, const std::string &rhs) {
-            return lhs.length() < rhs.length();
-        }
-    ));
+    if let result = ret.max(by: {$0.characters.count < $1.characters.count }) {
+        return result
+    } else {
+        return ""
+    }
 }
