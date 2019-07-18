@@ -1,3 +1,3 @@
 # codewars
 
-Various [codewars](https://www.codewars.com/) solutions
+Various [codewars](https://www.codewars.com/) solutions.
