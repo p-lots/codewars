@@ -5,15 +5,3 @@ Given an array of words, return an array of the number of letters that occupy th
 Input will consist of alphabet characters, both uppercase and lowercase. No spaces.
 
 Good luck!
-
-If you like this Kata, please try: 
-
-[Last digit symmetry](https://www.codewars.com/kata/59a9466f589d2af4c50001d8)
-
-[Alternate capitalization](https://www.codewars.com/kata/59cfc000aeb2844d16000075)
-
-~~~if:fortran
-## Fortran-Specific Notes
-
-Due to how strings and arrays work in Fortran, some of the strings in the input array will inevitably contain trailing whitespace.  **For this reason, please [trim](https://gcc.gnu.org/onlinedocs/gcc-4.3.4/gfortran/TRIM.html) your input strings before processing them.**
-~~~
