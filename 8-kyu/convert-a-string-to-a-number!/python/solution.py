@@ -1,5 +1,2 @@
-#include <string>
-
-int string_to_number(const std::string& s) {
-    return std::stoi(s);
-}
+def string_to_number(s):
+    return int(s)
