@@ -1,4 +1,2 @@
-char get_char(int i)
-{
-    return static_cast<char>(i);
-}
+def get_char(c):
+    return chr(c)
