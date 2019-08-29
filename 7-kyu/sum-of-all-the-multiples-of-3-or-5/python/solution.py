@@ -1,9 +1,2 @@
-func findSum(_ n: Int) -> Int {
-    var sum : Int = 0
-    for num in 3...n {
-        if num % 5 == 0 || num % 3 == 0 {
-            sum += num
-        }
-    }
-    return sum
-}
+def find(n):
+    return sum(number for number in range(1, n + 1) if number % 3 == 0 or number % 5 == 0)
