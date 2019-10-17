@@ -1,9 +1,2 @@
-import Foundation
-
-func evenOrOdd(_ number:Int) -> String {
-    var n = abs(number)
-    while n > 1 {
-        n -= 2
-    }
-    return n == 1 ? "Odd" : "Even"
-}
+def even_or_odd(number):
+    return "Even" if number % 2 == 0 else "Odd"
