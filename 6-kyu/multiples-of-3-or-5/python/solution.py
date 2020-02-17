@@ -1,4 +1,6 @@
-func solution(_ num: Int) -> Int {
-  guard num > 3 else { return num == 3 ? 3 : 0 }
-  return (3..<num).filter { $0 % 5 == 0 || $0 % 3 == 0 }.reduce(0, +)
-}
+from functools import reduce
+
+def solution(number):
+    if number <= 3:
+        return 3 if number == 3 else 0
+    return reduce(lambda acc, num: acc + num, list(filter(lambda item: item % 3 == 0 or item % 5 == 0, list(range(3, number)))))
