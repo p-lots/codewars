@@ -10,9 +10,8 @@ func longestConsec(_ strarr: [String], _ k: Int) -> String {
         }
         ret.append(str)
     }
-    if let result = ret.max(by: {$0.characters.count < $1.characters.count }) {
+    if let result = ret.max(by: {$0.count < $1.count }) {
         return result
-    } else {
-        return ""
     }
+    return ""
 }
