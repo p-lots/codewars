@@ -2,7 +2,7 @@ import Foundation
 
 func getTotal(_ lookup: [Int], _ str: String) -> Int {
     var ret = 0
-    let counts = str.components(separatedBy: " ").flatMap { Int($0) }
+    let counts = str.components(separatedBy: " ").compactMap { Int($0) }
     for (ix, count) in counts.enumerated() {
         ret += count * lookup[ix]
     }
