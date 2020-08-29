@@ -7,7 +7,7 @@ let lookupTable: [String: Int] = [
 ]
 
 func getScore(_ name: String) -> Int {
-    return name.characters.map { lookupTable[String($0).uppercased()]! }.reduce(0, +) + name.characters.count
+    return name.compactMap { lookupTable[String($0).uppercased()] }.reduce(0, +) + name.count
 }
 
 func rank(_ st: String, _ we: [Int], _ n: Int) -> String {
@@ -20,6 +20,5 @@ func rank(_ st: String, _ we: [Int], _ n: Int) -> String {
         if (lhs.1 == rhs.1) { return lhs.0 < rhs.0 }
         return lhs.1 > rhs.1
     }
-    print(namesScores)
     return namesScores[n - 1].0
 }
