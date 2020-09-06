@@ -1,6 +1,3 @@
-def flatten_and_sort(array):
-    ret = []
-    for arr in array:
-        for n in arr:
-            ret.append(n)
-    return sorted(ret)
+func flattenAndSort<T: Comparable>(_ arr: [[T]]) -> [T] {
+    return arr.flatMap { $0 }.sorted()
+}
