@@ -1,4 +1,2 @@
-bool xorf(bool a, bool b)
-{
-    return a ^ b;
-}
+def xor(a, b):
+    return a ^ b
