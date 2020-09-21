@@ -1,6 +1,5 @@
 func disemvowel(_ s: String) -> String {
-    let result = String(s.characters.filter { !isVowel($0) })
-    return result
+    return String(s.filter { !isVowel($0) })
 }
 
 func isVowel(_ c: Character) -> Bool {

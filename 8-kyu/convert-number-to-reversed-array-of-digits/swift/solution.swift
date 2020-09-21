@@ -1,3 +1,3 @@
 func digitize(_ num:Int) -> [Int] {
-    return String(num).characters.flatMap { Int(String($0)) }.reversed()
+    return String(num).compactMap { Int(String($0)) }.reversed()
 }

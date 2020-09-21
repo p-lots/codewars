@@ -1,4 +1,3 @@
-int opposite(int number) 
-{
-    return number * -1;
+func opposite(number: Double) -> Double {
+  return -number
 }

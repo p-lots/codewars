@@ -1,9 +1,7 @@
-#include <cmath>
+from math import sqrt
 
-bool is_square(int n)
-{
-    if (n < 0) return false;
-    double result = std::sqrt(static_cast<double>(n));
-    if (std::fmod(result, 1.0) == 0.0) return true;
-    return false;
-}
+def is_square(n):    
+    if n < 0:
+        return False
+    root = int(sqrt(n))
+    return root ** 2 == n

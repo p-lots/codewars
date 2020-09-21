@@ -1,6 +1,4 @@
-std::string get_middle(std::string input) 
-{
-  return input.length() % 2 == 0
-      ? input.substr(input.length() / 2 - 1, 2)
-      : input.substr(input.length() / 2, 1);
-}
+def get_middle(s):
+    if not s:
+        return ''
+    return s[len(s) // 2] if len(s) % 2 else s[len(s) // 2 - 1:len(s) // 2 + 1]
