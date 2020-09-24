@@ -1,14 +1,16 @@
-func encryptFunc(_ word: String) -> String {
-    let firstLetter = String(word[word.startIndex]).unicodeScalars
-    let firstToReplace = String(firstLetter[firstLetter.startIndex].value)
-    guard word.count > 1 else { return firstToReplace }
-    let lastLetter = String(word[word.index(before: word.endIndex)])
-    guard word.count > 2 else { return firstToReplace + lastLetter }
-    let secondLetter = String(word[word.index(word.startIndex, offsetBy: 1)])
-    let beginMiddle = word.index(word.startIndex, offsetBy: 2)
-    let endMiddle = word.index(before: word.endIndex)
-    let middleLetters = String(word[beginMiddle..<endMiddle])
-    return firstToReplace + lastLetter + middleLetters + secondLetter
+import Foundation
+
+func encryptFunc(_ text: String) -> String {
+    if let firstAscii = text.first?.asciiValue {
+        if text.count == 1 {
+            return String(firstAscii)
+        }
+        var textArr = Array(text)
+        textArr = Array(textArr[1...])
+        textArr.swapAt(0, textArr.count - 1)
+        return String(firstAscii) + String(textArr)
+    }
+    return ""
 }
 
 func encryptThis(text: String) -> String {
