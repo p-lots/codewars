@@ -1,8 +1,7 @@
-func disemvowel(_ s: String) -> String {
-    return String(s.filter { !isVowel($0) })
-}
+import Foundation
 
-func isVowel(_ c: Character) -> Bool {
-    return c == "A" || c == "E" || c == "I" || c == "O" || c == "U"
-    || c == "a" || c == "e" || c == "i" || c == "o" || c == "u"
+func disemvowel(_ s: String) -> String {
+    var vowels = CharacterSet()
+    vowels.insert(charactersIn: "AEIOUaeiou")
+    return String(s.unicodeScalars.filter { !vowels.contains($0) })
 }
