@@ -1,0 +1,1 @@
+always_odd=lambda n: n-(not(n%2)*1)
