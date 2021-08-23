@@ -1,0 +1,1 @@
+const plant = (seed, water, fert, temp) => temp >= 20 && temp <= 30 ? `${("-".repeat(water) + seed.repeat(fert)).repeat(water)}` : `${"-".repeat(water * water) + seed}`;
