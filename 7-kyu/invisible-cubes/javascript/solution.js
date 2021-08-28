@@ -1,0 +1,1 @@
+const notVisibleCubes = n => Math.max((n - 2) ** 3, 0);
