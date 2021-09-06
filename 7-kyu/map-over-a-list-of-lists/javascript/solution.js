@@ -1,0 +1,1 @@
+const gridMap = (fn, a) => a.map(xs => xs.map(elem => fn(elem)));
