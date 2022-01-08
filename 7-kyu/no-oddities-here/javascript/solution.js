@@ -1,0 +1,1 @@
+const noOdds = values => values.filter(n => n % 2 == 0);
