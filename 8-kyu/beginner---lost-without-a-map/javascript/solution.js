@@ -1,0 +1,1 @@
+const maps = nums => nums.map(n => n * 2);
