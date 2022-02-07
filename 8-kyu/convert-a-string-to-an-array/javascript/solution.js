@@ -1,0 +1,1 @@
+const stringToArray = strng => strng.split(' ');
