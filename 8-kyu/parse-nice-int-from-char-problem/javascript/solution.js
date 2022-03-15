@@ -1,0 +1,1 @@
+const getAge = inputString => parseInt(inputString.split(" ")[0]);
