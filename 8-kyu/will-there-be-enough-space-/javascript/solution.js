@@ -1,0 +1,1 @@
+const enough = (cap, on, wait) => Math.max(0, (on + wait) - cap);
