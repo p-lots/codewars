@@ -1,0 +1,1 @@
+const squareDigits = num => parseInt([...num.toString()].map((elem) => parseInt(elem) ** 2).join(''));
