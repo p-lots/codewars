@@ -1,0 +1,1 @@
+const boxCapacity = (length, width, height) => [length, width, height].reduce((acc, curr) => Math.floor(curr * 3 / 4) * acc, 1);
