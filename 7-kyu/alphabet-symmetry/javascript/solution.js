@@ -1,5 +1,12 @@
-def solve(arr):
-    ret = []
-    for word in arr:
-        ret.append(sum(1 for i, ch in enumerate(word.lower()) if i == ord(ch) - ord('a')))
-    return ret
+const solve = arr => {  
+  let ret = [];
+  for (const word of arr) {
+    let charsMatching = 0;
+    for (let i = 0; i < word.length; i++) {
+      const wordLower = word.toLowerCase();
+      if (wordLower.charCodeAt(i) - 97 == i) charsMatching++; // charCode of 'a' == 97
+    }
+    ret.push(charsMatching);
+  }
+  return ret;
+};
