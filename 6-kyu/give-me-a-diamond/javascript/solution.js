@@ -1,14 +1,31 @@
-def diamond(n):
-    if n % 2 == 0 or n < 1:
-        return None
-    ret = ''
-    spaces_before = n // 2
-    for num_stars in range(1, n + 1, 2):
-        ret += ' ' * spaces_before + '*' * num_stars + '\n'
-        spaces_before -= 1
-    spaces_before = 1
-    for num_stars in range(n - 2, 0, -2):
-        ret += ' ' * spaces_before + '*' * num_stars + '\n'
-        spaces_before += 1
-    return ret
-        
+const diamond = (n) => {
+  if (n % 2 === 0 || n < 1) {
+    return null;
+  }
+  if (n === 1) {
+    return "*\n";
+  }
+  let ret = [];
+  let spacesBefore = Math.floor(n / 2);
+  let asterisks = 1;
+  for (let i = 0; i < n; i++) {
+    let line = "";
+    if (i < (n - 1) / 2) {
+      line = " ".repeat(spacesBefore) + "*".repeat(asterisks);
+      ret.push(line);
+      spacesBefore--;
+      asterisks += 2;
+    } else if (i === (n - 1) / 2) {
+      line = "*".repeat(n);
+      ret.push(line);
+      spacesBefore = 1;
+      asterisks -= 2;
+    } else {
+      line = " ".repeat(spacesBefore) + "*".repeat(asterisks);
+      ret.push(line);
+      spacesBefore++;
+      asterisks -= 2;
+    }
+  }
+  return ret.join("\n") + "\n";
+}

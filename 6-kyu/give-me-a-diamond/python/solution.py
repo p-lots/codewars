@@ -1,29 +1,13 @@
-func diamond(_ size: Int) -> String? {
-  if size % 2 == 0 || size <= 0 { 
-    return nil
-  }    
-  var ret = ""
-  var spacesBefore : Int = size / 2
-  for n in stride(from: 1, to: size + 1, by: 2) {
-    for _ in 0..<spacesBefore {
-      ret += " "
-    }
-    for _ in 0..<n {
-      ret += "*"
-    }
-    spacesBefore -= 1
-    ret += "\n"
-  }
-  spacesBefore = 1
-  for n in stride(from: size - 2, to: 0, by: -2) {
-    for _ in 0..<spacesBefore {
-      ret += " "
-    }
-    for _ in 0..<n {
-      ret += "*"
-    }
-    spacesBefore += 1
-    ret += "\n"
-  }
-  return Optional(ret)
-}
+def diamond(n):
+    if n % 2 == 0 or n < 1:
+        return None
+    ret = ''
+    spaces_before = n // 2
+    for num_stars in range(1, n + 1, 2):
+        ret += ' ' * spaces_before + '*' * num_stars + '\n'
+        spaces_before -= 1
+    spaces_before = 1
+    for num_stars in range(n - 2, 0, -2):
+        ret += ' ' * spaces_before + '*' * num_stars + '\n'
+        spaces_before += 1
+    return ret
