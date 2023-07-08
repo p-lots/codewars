@@ -1,3 +1,4 @@
-def DNA_strand(dna):
-    lookup_table = {'G': 'C', 'C': 'G', 'A': 'T', 'T': 'A'}
-    return ''.join(lookup_table[item] for item in dna)
+const DNAStrand = dna => {
+  const lookup = {G: "C", C: "G", T: "A", A: "T"};
+  return dna.split("").map((elem) => lookup[elem]).join("");
+};

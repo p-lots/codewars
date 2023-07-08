@@ -1,7 +1,7 @@
-from math import sqrt
-
-def is_square(n):    
-    if n < 0:
-        return False
-    root = int(sqrt(n))
-    return root ** 2 == n
+const isSquare = n => {
+  if (n < 0) {
+    return false;
+  }
+  const root = Math.floor(n ** 0.5);
+  return root * root === n;
+}

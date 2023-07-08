@@ -1,5 +1,3 @@
 def high_and_low(numbers):
-    arr = []
-    for n in numbers.split():
-        arr.append(int(n))
-    return str(max(arr)) + ' ' + str(min(arr))
+    numbers = [int(n) for n in numbers.split()]
+    return f'{max(numbers)} {min(numbers)}'

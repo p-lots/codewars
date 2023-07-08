@@ -1,9 +1,11 @@
-def calc_type(a, b, res):
-    if a + b == res:
-        return "addition"
-    if a - b == res:
-        return "subtraction"
-    if a * b == res:
-        return "multiplication"
-    if a / b == res:
-        return "division"
+const calcType = (a, b, res) => {
+  if (a + b === res) {
+    return "addition";
+  } else if (a - b === res) {
+    return "subtraction";
+  } else if (a * b === res) {
+    return "multiplication";
+  } else if (a / b === res) {
+    return "division";
+  }
+};

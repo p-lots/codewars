@@ -1,4 +1,5 @@
-def solve(s):
-    upper_count = sum(1 for ch in s if ch.isupper())
-    lower_count = sum(1 for ch in s if ch.islower())
-    return s.upper() if upper_count > lower_count else s.lower()
+const solve = s => {
+  const upperCount = s.split("").filter(elem => elem === elem.toUpperCase()).length;
+  const lowerCount = s.split("").filter(elem => elem === elem.toLowerCase()).length;
+  return upperCount > lowerCount ? s.toUpperCase() : s.toLowerCase();
+};

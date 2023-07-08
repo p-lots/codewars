@@ -1,4 +1,7 @@
-def get_middle(s):
-    if not s:
-        return ''
-    return s[len(s) // 2] if len(s) % 2 else s[len(s) // 2 - 1:len(s) // 2 + 1]
+const getMiddle = s => {
+  if (!s) {
+    return "";
+  }
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 === 1 ? s[mid] : s.slice(mid - 1, mid + 1);
+};

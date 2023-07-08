@@ -1,22 +1,14 @@
-#include <algorithm>
-#include <cctype>
-#include <iostream>
-#include <numeric>
-
-int get_sum(std::string str)
-{
-    if (str.empty()) return 0;
-    else if (!(std::all_of(str.begin(), str.end(), ::isalpha))) return 0;
-    int ret = 0;
-    for (char c : str) {
-        ret += static_cast<int>(std::toupper(c));
+const compare = (s1, s2) => {
+  const getStrSum = str => {
+    if (str === null) {
+      return 0;
     }
-    return ret;
-}
-
-bool compare(std::string s1, std::string s2)
-{
-    bool ret = get_sum(s1) == get_sum(s2);
-    std::cout << "s1: " << s1 << "\ts2: " << s2 << "\tret: " << (ret ? "True" : "False") << '\n';
-    return ret;
-}
+    for (const ch of str) {
+      if (!ch.match(/[a-z]/gi)) {
+        return 0;
+      }
+    }
+    return [...str].reduce((acc, nxt) => acc + nxt.toUpperCase().charCodeAt(0), 0);
+  };
+  return getStrSum(s1) === getStrSum(s2);
+};

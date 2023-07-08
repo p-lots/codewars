@@ -1,4 +1,1 @@
-def reverse_bits(n):
-    b = bin(n)[2:]
-    b = b[::-1]
-    return int(b, 2)
+const reverseBits = n => parseInt(n.toString(2).split("").reverse().join(""), 2);

@@ -1,2 +1,1 @@
-def even_numbers(arr, n):
-    return [number for number in arr if number % 2 == 0][-n:]
+const evenNumbers = (array, number) => array.filter(elem => elem % 2 === 0).slice(-number);

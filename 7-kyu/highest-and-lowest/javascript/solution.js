@@ -1,5 +1,4 @@
-def high_and_low(numbers):
-    arr = []
-    for n in numbers.split():
-        arr.append(int(n))
-    return str(max(arr)) + ' ' + str(min(arr))
+const highAndLow = numbers => {
+  numbers = numbers.split(" ").map(elem => parseInt(elem));
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}

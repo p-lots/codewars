@@ -1,11 +1,12 @@
-def remove_duplicate_words(s):
-    if not s:
-        return ''
-    s_split = s.split()
-    s_set = []
-    ret = []
-    for word in s_split:
-        if word not in s_set:
-            s_set.append(word)
-            ret.append(word)
-    return ' '.join(ret)
+const removeDuplicateWords = (s) => {
+  if (!s) {
+    return "";
+  }
+  let ret = [];
+  for (const word of s.split(' ')) {
+    if (!ret.includes(word)) {
+      ret.push(word);
+    }
+  }
+  return ret.join(' ');
+};

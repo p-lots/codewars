@@ -1,4 +1,3 @@
-const findShort = (s) => {
-  const ret = s.split(" ").map((elem) => elem.length);
-  return Math.min(...ret);
-};
+func find_short(_ str: String) -> Int {
+    return str.components(separatedBy: " ").map { $0.count }.min() ?? 0
+}

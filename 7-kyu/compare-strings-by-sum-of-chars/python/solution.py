@@ -1,19 +1,6 @@
-#include <algorithm>
-#include <cctype>
-#include <numeric>
+def get_char_sum(strng):
+    return 0 if strng is None or any(not ch.isalpha() for ch in strng) else \
+        sum(ord(ch.upper()) for ch in strng)
 
-int get_sum(std::string str)
-{
-    if (str.empty()) return 0;
-    else if (!(std::all_of(str.begin(), str.end(), ::isalpha))) return 0;
-    int ret = 0;
-    for (char c : str) {
-        ret += static_cast<int>(std::toupper(c));
-    }
-    return ret;
-}
-
-bool compare(std::string s1, std::string s2)
-{
-    return get_sum(s1) == get_sum(s2);
-}
+def compare(s1, s2):
+    return get_char_sum(s1) == get_char_sum(s2)
