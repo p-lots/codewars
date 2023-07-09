@@ -1,15 +1,3 @@
-#include <algorithm>
-#include <vector>
-using namespace std;
+const min = list => Math.min(...list);
 
-int min(vector<int> list)
-{
-    sort(list.begin(), list.end());
-    return list.front();
-}
-
-int max(vector<int> list)
-{
-    sort(list.begin(), list.end());
-    return list.back();
-}
+const max = list => Math.max(...list);

@@ -1,10 +1,7 @@
-def max_product(a):    
-    first_max = 0
-    second_max = 0
-    for x in a:
-        if x > first_max:
-            second_max = first_max
-            first_max = x
-        elif x > second_max:
-            second_max = x
-    return first_max*second_max
+def max_product(a):
+    largest = max(a)
+    next_largest = min(a)
+    for n in a:
+        if next_largest < n < largest:
+            next_largest = n
+    return next_largest * largest

@@ -1,2 +1,1 @@
-def get_char(c):
-    return chr(c)
+const getChar = c => String.fromCharCode(c);

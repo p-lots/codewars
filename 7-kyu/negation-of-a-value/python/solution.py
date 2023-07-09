@@ -1,7 +1,5 @@
 def negation_value(s, val):
+    val = bool(val)
     if not s:
-        return bool(val)
-    while s:
-        val = not val
-        s = s[1:]
-    return val
+        return val
+    return not val if len(s) % 2 == 1 else val

@@ -1,9 +1,3 @@
-using System;
-
-public static class Kata 
-{
-    public static int summation(int num)
-    {
-        return num * (num + 1) / 2;
-    }
+int summation(int n) {
+    return n * (n + 1) / 2;
 }

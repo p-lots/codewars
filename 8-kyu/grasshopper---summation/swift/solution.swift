@@ -1,1 +1,3 @@
-const summation = num => num * (num + 1) / 2;
+func summation(_ n: Int) -> Int {
+    return n * (n + 1) / 2
+}

@@ -1,12 +1,2 @@
-func stringy(_ size: Int) -> String {
-    var shouldBeOne = false
-    return (1...size).reduce("") { accum, _ in
-        shouldBeOne = !shouldBeOne
-        if shouldBeOne {
-            return accum + "1"
-        }
-        else {
-            return accum + "0"
-        }
-    }
-}
+def stringy(size):
+    return ''.join('1' if i % 2 == 0 else '0' for i in range(size))

@@ -1,12 +1,5 @@
-#include <vector>
-using namespace std;
+def minimum(arr):
+    return min(arr)
 
-int min(vector<int> list)
-{    
-    return *std::min_element(list.begin(), list.end());
-}
-
-int max(vector<int> list)
-{    
-    return *std::max_element(list.begin(), list.end());
-}
+def maximum(arr):
+    return max(arr)

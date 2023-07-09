@@ -1,7 +1,6 @@
-def negation_value(s, val):
-    if not s:
-        return bool(val)
-    while s:
-        val = not val
-        s = s[1:]
-    return val
+function negationValue(string, value) {
+  if (!string) {
+    return !!value;
+  }
+  return string.length % 2 == 1 ? !value : !!value;
+}

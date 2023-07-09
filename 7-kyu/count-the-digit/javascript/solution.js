@@ -1,8 +1,16 @@
-def nb_dig(n, d):
-    arr = list(filter(lambda num: str(d) in num, [str(i * i) for i in range(n + 1)]))
-    ret = 0
-    for num in arr:
-        for ch in num:
-            if ch == str(d):
-                ret += 1
-    return ret
+const nbDig = (n, d) => {
+  let numbers = [];
+  for (let i = 0; i <= n; i++) {
+    numbers.push(i * i);
+  }
+  let count = 0;
+  for (const num of numbers) {
+    const numStr = num.toString();
+    for (const ch of numStr) {
+      if (ch === d.toString()) {
+        count++;
+      }
+    }
+  }
+  return count;
+}

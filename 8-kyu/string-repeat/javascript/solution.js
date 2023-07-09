@@ -1,2 +1,1 @@
-def repeat_str(repeat, strng):
-    return strng * repeat
+const repeatStr = (n, s) => s.repeat(n);

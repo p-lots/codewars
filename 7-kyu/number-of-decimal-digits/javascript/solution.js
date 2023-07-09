@@ -1,2 +1,1 @@
-def digits(n):
-    return len(str(n))
+const digits = n => n.toString().length;

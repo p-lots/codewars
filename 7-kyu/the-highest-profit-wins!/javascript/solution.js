@@ -1,2 +1,1 @@
-def min_max(lst):
-    return [min(lst), max(lst)]
+const minMax = (arr) => [Math.min(...arr), Math.max(...arr)];

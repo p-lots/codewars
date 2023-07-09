@@ -1,2 +1,7 @@
-def stringy(size):
-    return ''.join('1' if i % 2 == 0 else '0' for i in range(size))
+const stringy = size => {
+  let ret = "";
+  for (let i = 0; i < size; i++) {
+    ret += (i % 2 === 0 ? "1" : "0");
+  }
+  return ret;
+}
