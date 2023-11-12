@@ -1,0 +1,1 @@
+const find = (arr, elem) => arr.includes(elem) ? arr.indexOf(elem) : "Not found";
