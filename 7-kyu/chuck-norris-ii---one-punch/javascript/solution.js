@@ -1,0 +1,1 @@
+const onePunch = (items) => typeof items === "string" && items.length > 0 ? items.split(" ").sort().map(word => [...word].filter(letter => !("ae".includes(letter.toLowerCase()))).join("")).join(" ") : "Broken!";
