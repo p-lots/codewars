@@ -1,2 +1,3 @@
 def bingo(array): 
-    return 'WIN' if 2 in array and 9 in array and 14 in array and 7 in array and 15 in array else 'LOSE'
+    winning_numbers = [ord(ch) - ord('A') + 1 for ch in 'BINGO'] # A = 1, B = 2, ...
+    return 'WIN' if all(num in array for num in winning_numbers) else 'LOSE'

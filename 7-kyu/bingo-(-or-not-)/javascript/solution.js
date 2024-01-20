@@ -1,2 +1,5 @@
-def bingo(array): 
-    return 'WIN' if 2 in array and 9 in array and 14 in array and 7 in array and 15 in array else 'LOSE'
+const bingo = (a) => {
+  const winningPhrase = "BINGO";
+  const winningNumbers = [...winningPhrase].map((elem) => elem.charCodeAt(0) - "A".charCodeAt(0) + 1);
+  return winningNumbers.every((elem) => a.includes(elem)) ? "WIN" : "LOSE";
+};
