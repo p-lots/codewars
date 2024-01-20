@@ -1,0 +1,1 @@
+export const distinct = (a: number[]): number[] => Array.from(new Set(a));

@@ -1,6 +1,2 @@
 def distinct(seq):
-    ret = []
-    for item in seq:
-        if ret.count(item) == 0:
-            ret.append(item)
-    return ret
+    return sorted(set(seq), key=lambda elem: seq.index(elem))

@@ -17,4 +17,4 @@ def greet(language):
         'swedish': 'Valkommen',
         'welsh': 'Croeso'
     }
-    return db[language] if language in db else db['english']
+    return db.get(language, db['english'])
