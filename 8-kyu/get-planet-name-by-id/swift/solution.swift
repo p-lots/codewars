@@ -4,9 +4,5 @@ func getPlanetName(_ id: Int) -> String {
     4: "Mars",    5: "Jupiter", 6: "Saturn",
     7: "Uranus",  8: "Neptune"
   ]
-  if let ret = planets[id] {
-    return ret
-  } else {
-    return ""
-  }
+  return planets[id] ?? ""
 }

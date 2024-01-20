@@ -1,19 +1,16 @@
+from collections import defaultdict
+
 def who_is_online(friends):
     if not friends:
         return {}
-    ret = {}
+    friends_status = defaultdict(list)
     for user in friends:
+        username = user['username']
         if user['status'] == 'online':
             if user['last_activity'] > 10:
-                if 'away' not in ret.keys():
-                    ret['away'] = []
-                ret['away'].append(user['username'])
-            else:
-                if 'online' not in ret.keys():
-                    ret['online'] = []
-                ret['online'].append(user['username'])
-        elif user['status'] == 'offline':
-            if 'offline' not in ret.keys():
-                ret['offline'] = []
-            ret['offline'].append(user['username'])
-    return ret
+                friends_status['away'].append(username)
+                continue
+            friends_status['online'].append(username)
+            continue
+        friends_status['offline'].append(username)
+    return friends_status

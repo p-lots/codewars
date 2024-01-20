@@ -1,8 +1,4 @@
-geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
-
-def goose_filter(birds):
-    ret = []
-    for bird in birds:
-        if bird not in geese:
-            ret.append(bird)
-    return ret
+const gooseFilter = birds => {
+  const geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(bird => !geese.includes(bird));
+};

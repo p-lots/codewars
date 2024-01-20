@@ -1,2 +1,5 @@
-def html_special_chars(data): 
-    return data.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+def html_special_chars(data):
+    replacements = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}
+    for to_replace, replacement in replacements.items():
+        data = data.replace(to_replace, replacement)
+    return data
