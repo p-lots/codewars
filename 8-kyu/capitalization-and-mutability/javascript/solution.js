@@ -1,0 +1,1 @@
+capitalizeWord = lambda word: word[0].upper() + word[1:]
