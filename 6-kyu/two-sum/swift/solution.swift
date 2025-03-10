@@ -1,15 +1,13 @@
 class Solution {
-    static func twosum(numbers: [Int], target: Int) -> [Int] {
-        var lookup_table = [Int: Int]()
-        var ret = [Int]()
-        for (i, num) in numbers.enumerated() {
-            let diff = target - num
-            if let complement = lookup_table[diff] {
-                ret = [complement, i]
-            } else {
-                lookup_table.updateValue(i, forKey: num)
-            }
-        }
-        return ret
+  static func twosum(numbers: [Double], target: Double) -> [Int] {
+    var lookupTable = [Double: Int]()
+    for (idx, num) in numbers.enumerated() {
+      let complement = target - num
+      if let otherIdx = lookupTable[complement] {
+        return [otherIdx, idx]
+      }
+      lookupTable[num] = idx
     }
+    return [-1, -1]
+  }
 }
