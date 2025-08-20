@@ -1,0 +1,1 @@
+export const addLength = (str: string): string[] => str.split(" ").map(word => `${word} ${word.length}`);
