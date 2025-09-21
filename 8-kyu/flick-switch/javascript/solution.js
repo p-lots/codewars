@@ -1,0 +1,1 @@
+const flickSwitch = (arr, flickState = true) => arr.map((elem) => elem === "flick" ? (flickState = !flickState) : flickState);
