@@ -1,0 +1,1 @@
+export const score = (n: number): number => n > 1 ? 2 ** Math.ceil(Math.log2(n)) - 1 : n;
